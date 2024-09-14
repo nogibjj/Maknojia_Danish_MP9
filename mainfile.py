@@ -37,3 +37,15 @@ plt.xlabel("NFL Team")
 plt.ylabel("Running Backs Total Fantasy Football Points 2024")
 # Show the chart
 plt.show()
+
+# Create Scatterplot
+# Plotting the scatter chart
+plt.scatter(x, y, color="orange")
+# Rotating all x-axis labels vertically that way they fit on the chart
+plt.xticks(range(len(x)), x, rotation="vertical")
+# Labeling chart
+plt.title("Projected Total RB Fantasy Football Points By NFL Team")
+plt.xlabel("NFL Team")
+plt.ylabel("Running Backs Total Fantasy Football Points 2024")
+# Show the chart
+plt.show()
