@@ -82,4 +82,4 @@ print(descriptioncsv)
 bar_chart(new_df)
 
 # scatterplot
-scatterplot(df)
+scatterplot(new_df)
