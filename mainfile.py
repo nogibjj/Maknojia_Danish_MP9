@@ -71,18 +71,18 @@ def scatterplot(dataframe):
 
 
 # Csv open
-dataframe = csv_open(file_name)
+fantasy_dataframe = csv_open(file_name)
 
 # Group data
-grouped_df = groupsorted_data(dataframe)
-print(grouped_df)
+grouped_fantasy_df = groupsorted_data(fantasy_dataframe)
+print(grouped_fantasy_df)
 
 # Print stats summary
-descriptioncsv = summary_stat(grouped_df)
+descriptioncsv = summary_stat(grouped_fantasy_df)
 print(descriptioncsv)
 
 # Bar chart
-bar_chart(grouped_df)
+bar_chart(grouped_fantasy_df)
 
 # Scatterplot
-scatterplot(grouped_df)
+scatterplot(grouped_fantasy_df)
