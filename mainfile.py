@@ -7,19 +7,19 @@ file_name = "Fantasy_Football_Projections_RB.csv"
 
 # Read CSV
 def csv_open(file_path):
-    df = pd.read_csv(file_path)
-    return df
+    data = pd.read_csv(file_path)
+    return data
 
 
 def groupsorted_data(dataframe):
     # Group data by team and FPTS
-    grouped_df = pd.DataFrame(dataframe.groupby("Team")["FPTS"].sum()).reset_index(
+    grouped = pd.DataFrame(dataframe.groupby("Team")["FPTS"].sum()).reset_index(
         drop=False
     )
 
     # Sort the new dataframe in ascending order
-    grouped_df = grouped_df.sort_values(by="FPTS", ascending=True)
-    return grouped_df
+    grouped = grouped.sort_values(by="FPTS", ascending=True)
+    return grouped
 
 
 def summary_stat(dataframe):
@@ -29,10 +29,10 @@ def summary_stat(dataframe):
 
 
 # Creating bar chart
-def bar_chart(grouped_df):
+def bar_chart(dataframe):
     # Setting x to nfl team column and y to fantasy points column
-    x = grouped_df["Team"]
-    y = grouped_df["FPTS"]
+    x = dataframe["Team"]
+    y = dataframe["FPTS"]
 
     # Plotting the bar chart
     plt.bar(x, y, width=0.8, color="orange")
@@ -50,10 +50,10 @@ def bar_chart(grouped_df):
 
 
 # Create Scatterplot
-def scatterplot(grouped_df):
+def scatterplot(dataframe):
     # Setting x to nfl team column and y to fantasy points column
-    x = grouped_df["Team"]
-    y = grouped_df["FPTS"]
+    x = dataframe["Team"]
+    y = dataframe["FPTS"]
 
     # Plotting the scatter chart
     plt.scatter(x, y, color="orange")
@@ -71,10 +71,10 @@ def scatterplot(grouped_df):
 
 
 # Csv open
-df = csv_open(file_name)
+dataframe = csv_open(file_name)
 
 # Group data
-grouped_df = groupsorted_data(df)
+grouped_df = groupsorted_data(dataframe)
 print(grouped_df)
 
 # Print stats summary
