@@ -19,21 +19,12 @@ My project accomplishes the following tasks:
 - The project contains the main file, which opens the Fantasy_Football_Projections_RB.csv, groups the data by team, and sorts in ascending order next a summary of statistics containing the mean, median (50%) & standard deviation, and two graphs are generated: one bar chart and the second a scatter graph.
 
 ## Summary Statistics
-count   32.000000
-mean   316.203125
-std     42.239971
-min    246.700000
-25%    289.275000
-50%    304.900000
-75%    327.575000
-max    435.900000
+![alt text](image.png)
 
-## Charts
-
-Bar Chart
+## Bar Chart
 ![alt text](barchart.png)
 
-Scatter Plot
+## Scatter Plot
 ![alt text](scatter.png)
 
 
