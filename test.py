@@ -7,7 +7,8 @@ from mainfile import scatterplot
 import pandas as pd
 from io import StringIO
 
-df_test = pd.DataFrame(
+# Test DataFrame as a constant to avoid redefining it
+DF_TEST = pd.DataFrame(
     {
         "Team": ["TeamA", "TeamB", "TeamA", "TeamC", "TeamB"],
         "FPTS": [120, 200, 150, 90, 50],
@@ -45,7 +46,7 @@ def test_groupsorted_data():
         }
     ).reset_index(drop=True)
 
-    result = groupsorted_data(df_test).reset_index(drop=True)
+    result = groupsorted_data(DF_TEST).reset_index(drop=True)
 
     # Check if the output matches the expected result
     assert result.equals(
@@ -55,7 +56,7 @@ def test_groupsorted_data():
 
 def test_summary_stat():
     # Input DataFrame for testing
-    df_test = pd.DataFrame(
+    df_summary_test = pd.DataFrame(
         {"Team": ["TeamC", "TeamB", "TeamA"], "FPTS": [90, 250, 270]}
     )
 
@@ -66,7 +67,7 @@ def test_summary_stat():
     )
 
     # Run the function to test
-    result = summary_stat(df_test)
+    result = summary_stat(df_summary_test)
 
     # Extract only the FPTS statistics from result
     result_fpts = result["FPTS"]
@@ -88,7 +89,7 @@ def test_bar_chart():
         # Test bar_chart without displaying the plot
         bar_chart(df)
         plot_success = True
-    except Exception as e:
+    except ValueError as e:
         plot_success = False
         print(f"Bar chart failed: {e}")
 
@@ -108,14 +109,14 @@ def test_scatterplot():
         # Test scatterplot without displaying the plot
         scatterplot(df)
         plot_success = True
-    except Exception as e:
+    except ValueError as e:
         plot_success = False
         print(f"Scatterplot failed: {e}")
 
     assert plot_success, "Scatter plot generation failed"
 
 
-if __name__ == "__mainfile___":
+if __name__ == "__main__":
     test_csv_open()
     test_groupsorted_data()
     test_summary_stat()
