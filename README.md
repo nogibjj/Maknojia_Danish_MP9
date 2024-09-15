@@ -1,6 +1,6 @@
 # Danish_Maknojia_MiniProject2
 
-[![CI](https://github.com/nogibjj/Danish_Maknojia_Assignment1/actions/workflows/data.yml/badge.svg)](https://github.com/nogibjj/Danish_Maknojia_Assignment1/actions/workflows/data.yml)
+[![CI](https://github.com/nogibjj/Maknojia_Danish_MP2/actions/workflows/ci.yml/badge.svg)](https://github.com/nogibjj/Maknojia_Danish_MP2/actions/workflows/ci.yml)
 
 ## Objectives
 My project accomplishes the following tasks:
